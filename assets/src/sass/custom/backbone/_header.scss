@@ -6,12 +6,6 @@
 
   &-web{
     position: relative;
-
-    >.container{
-      @include BootstrapMinWidthResponsive(lg){
-        padding: 0;
-      }
-    }
   }
 
   &-navigation{
