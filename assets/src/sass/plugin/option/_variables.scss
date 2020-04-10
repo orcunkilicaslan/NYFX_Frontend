@@ -20,15 +20,19 @@ $site-aux-clr-circle-turquoise: #20cedb;
 /* Auxiliary Color Settings */
 
 /* Site Main Settings */
-$global-font-family-default:        'Roboto Slab';
-$global-font-size:                  14px;
-$global-clr-text-light:             $global-clr-soft-blue;
-$global-clr-text-dark:              $global-clr-dark-blue;
-$global-border-light-gray:          darken($global-clr-soft-gray, 5%);
-$global-border-light-gray-focus:    darken($global-clr-soft-gray, 15%);
-$global-input-border-light:         $global-border-light-gray;
-$global-input-border-light-focus:   $global-border-light-gray-focus;
-$global-input-disabled-light:       $global-clr-soft-gray;
+$global-font-family-proximanova-thin:     'ProximaNovaThin';
+$global-font-family-proximanova-regular:  'ProximaNovaRegular';
+$global-font-family-proximanova-semi:     'ProximaNovaSemibold';
+$global-font-family-proximanova-bold:     'ProximaNovaBold';
+$global-font-family-default:              $global-font-family-proximanova-regular;
+$global-font-size:                        14px;
+$global-clr-text-light:                   $global-clr-soft-blue;
+$global-clr-text-dark:                    $global-clr-dark-blue;
+$global-border-light-gray:                darken($global-clr-soft-gray, 5%);
+$global-border-light-gray-focus:          darken($global-clr-soft-gray, 15%);
+$global-input-border-light:               $global-border-light-gray;
+$global-input-border-light-focus:         $global-border-light-gray-focus;
+$global-input-disabled-light:             $global-clr-soft-gray;
 /* Site Main Color Settings */
 
 /* Site Gradient Background Color */
