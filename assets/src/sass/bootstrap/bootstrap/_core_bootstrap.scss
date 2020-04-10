@@ -14,7 +14,7 @@
 @import "../../../../../node_modules/bootstrap/scss/type";
 //@import "../../../../../node_modules/bootstrap/scss/images";
 //@import "../../../../../node_modules/bootstrap/scss/code";
-//@import "../../../../../node_modules/bootstrap/scss/grid";
+@import "../../../../../node_modules/bootstrap/scss/grid";
 
 // Standards
 @import "../../../../../node_modules/bootstrap/scss/tables";
@@ -49,7 +49,7 @@
 // Utility
 //@import "../../../../../node_modules/bootstrap/scss/utilities/align";
 //@import "../../../../../node_modules/bootstrap/scss/utilities/background";
-//@import "../../../../../node_modules/bootstrap/scss/utilities/borders";
+@import "../../../../../node_modules/bootstrap/scss/utilities/borders";
 @import "../../../../../node_modules/bootstrap/scss/utilities/clearfix";
 @import "../../../../../node_modules/bootstrap/scss/utilities/display";
 //@import "../../../../../node_modules/bootstrap/scss/utilities/embed";

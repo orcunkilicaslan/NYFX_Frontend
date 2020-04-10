@@ -1,0 +1,65 @@
+
+.headbigslider{
+  color: $global-clr-white;
+  background-color: #242B3B;
+  position: relative;
+
+  &::before{
+    content: "";
+    width: 100%;
+    height: 135px;
+    position: absolute;
+    top: 0;
+    @include background-linear(rgba(44, 77, 118, 0.75), rgba(93, 112, 134, 0), -90);
+    background-color: transparent !important;
+    background-repeat: repeat-x;
+    background-position: top center;
+    overflow: hidden;
+    z-index: 2;
+  }
+
+  &-owl{}
+
+  &-item{
+    height: 560px;
+    padding-top: 60px;
+
+    &-container{
+      @include flexbox-display-flex();
+      @include flexbox-align-items(center);
+      height: 100%;
+      position: relative;
+      z-index: 3;
+    }
+    &-content{}
+    &-title{
+
+      @include BootstrapMinWidthResponsive(lg){
+        max-width: 410px;
+      }
+
+      .slidertitle{
+        font-family: $global-font-family-proximanova-bold !important;
+        font-size: 50px;
+        font-weight: bold;
+        line-height: 0.9;
+      }
+      .sliderdesc{
+        font-family: $global-font-family-proximanova-thin !important;
+        font-size: 20px;
+        font-weight: normal;
+        line-height: 1;
+        margin-top: 10px;
+      }
+      .sliderbtn{
+        margin-top: 20px;
+      }
+    }
+    &-bg{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+    }
+  }
+}
