@@ -1,12 +1,3 @@
-
-.siteformui{
-  form{
-    *, *::before, *::after {
-      letter-spacing: -.42px;
-    }
-  }
-}
-
 .sitemodalformbox{
   background-color: transparentize($global-clr-soft-blue, 0.85);
   padding: 40px;

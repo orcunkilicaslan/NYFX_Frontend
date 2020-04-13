@@ -202,5 +202,42 @@
 
   }
 
+  &box{
+    .labelanimation{
+
+      label{
+        top: 12px;
+      }
+
+      &[class*="col"]{
+        label{
+          left: 26px !important;
+        }
+      }
+
+      #{$formclassname}-control{
+        border-color: $global-border-light-gray !important;
+        padding-left: 0.9rem;
+        padding-bottom: 0;
+        padding-top: 12px;
+
+        &:focus ~ label,
+        &:valid ~ label,
+        &:invalid ~ label{
+          top: 6px;
+        }
+
+        &:focus-within ~ label{
+          top: 6px;
+        }
+
+        &:focus ~ .msginput,
+        &:valid ~ .msginput{
+          top: 6px;
+        }
+      }
+    }
+  }
+
 }
 /* Form UI New */

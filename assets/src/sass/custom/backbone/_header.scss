@@ -93,27 +93,37 @@
       }
 
       &-btns{
+        @include flexbox-display-flex();
+        position: relative;
+
+        .dropdownbtns{
+          &:first-child{
+            .btn{@include border-radii(50px,0,0,50px);}
+          }
+          &:last-child{
+            .btn{@include border-radii(0,50px,50px,0);}
+          }
+        }
 
         .btn{
           width: 140px;
           height: 36px;
           font-size: 18px;
           font-weight: 500;
-          line-height: 1;
+          line-height: 1.35;
           border: none;
         }
 
-        .btn-group>.btn-group:not(:last-child)>.btn,
-        .btn-group>.btn:not(:last-child):not(.dropdown-toggle){
-          border-top-right-radius: 0 !important;
-          border-bottom-right-radius: 0 !important;
+        .dropdown-menu{
+          background-color: #EBEBED;
+          width: 100%;
+          min-width: auto;
+          padding: 10px;
+          margin: 0;
+          top: 40px !important;
+          @include transform(none !important);
+          @include border-radius(10px);
         }
-        .btn-group>.btn-group:not(:first-child)>.btn,
-        .btn-group>.btn:not(:first-child) {
-          border-top-left-radius: 0 !important;
-          border-bottom-left-radius: 0 !important;
-        }
-
       }
     }
   }
