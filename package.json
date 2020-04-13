@@ -18,7 +18,7 @@
     "bootstrap-select": "^1.13.12",
     "browser-sync": "^2.26.7",
     "browserslist": "^4.11.1",
-    "caniuse-lite": "^1.0.30001039",
+    "caniuse-lite": "^1.0.30001041",
     "del": "^4.1.1",
     "dropzone": "^5.7.0",
     "font-awesome": "^4.7.0",
@@ -33,13 +33,13 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
     "gulp-util": "^3.0.8",
-    "webpack-stream": "^5.2.1",
+    "jquery": "^3.5.0",
     "jsdom": "^16.2.2",
-    "jquery": "^3.4.1",
     "moment": "^2.24.0",
     "numeral": "^2.0.6",
     "owl.carousel": "^2.3.4",
-    "popper.js": "^1.16.1"
+    "popper.js": "^1.16.1",
+    "webpack-stream": "^5.2.1"
   },
   "dependencies": {
     "inputmask": "^4.0.9",
