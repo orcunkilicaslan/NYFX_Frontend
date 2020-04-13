@@ -42,6 +42,7 @@ gulp.task('sass-bootstrap', () => {
           discardComments: {
               removeAll: true
           },
+          discardUnused: false,
           zindex: false,
       }) : util.noop())
       .pipe(concat('bootstrap.css'))
@@ -68,6 +69,7 @@ gulp.task('sass-plugin', () => {
           discardComments: {
               removeAll: true
           },
+          discardUnused: false,
           zindex: false,
       }) : util.noop())
       .pipe(concat('plugin-app.css'))
@@ -114,6 +116,7 @@ gulp.task('sass-custom', () => {
             discardComments: {
                 removeAll: true
             },
+            discardUnused: false,
             zindex: false,
         }) : util.noop())
         .pipe(concat('custom-app.css'))
