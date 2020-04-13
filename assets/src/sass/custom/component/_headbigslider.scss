@@ -28,6 +28,8 @@
       @include flexbox-display-flex();
       @include flexbox-align-items(center);
       height: 100%;
+      padding-top: 70px;
+      padding-bottom: 70px;
       position: relative;
       z-index: 3;
     }
@@ -51,6 +53,11 @@
         margin-top: 10px;
       }
       .sliderbtn{
+        width: 190px;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.35;
+        border: none;
         margin-top: 20px;
       }
     }
