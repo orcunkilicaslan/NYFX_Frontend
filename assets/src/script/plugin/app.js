@@ -84,55 +84,18 @@ jQuery(function($) {
 /* Header Web Navbar Dropdown Menu */
 $(window).on("load resize",function(e){if($(window).width() > 991){
 
-    var dfnNavMenuWidth = $("header.header .dfn-headnav");
-    $("header.header .dfn-headnav .megamenu-nav").css("width", dfnNavMenuWidth.width() + "px");
-    $("header.header .dfn-headnav .megamultimenu > .megamultimenu-row").css("width", dfnNavMenuWidth.width() + "px");
-
-    $('.dfn-menu-list-item > a[data-toggle="dropdown"]').click(function() {
-        $('.header-web').addClass('activemenubar');
+    $('.dfn-menu .dfn-menu-list .dfn-menu-list-item > a[data-toggle="dropdown"]').click(function() {
+        $('.dfn-menu .dfn-menu-list').addClass('activenavbar');
 
         $(document).click(function(event) {
             if (!$(event.target).hasClass('active')) {
-                setTimeout(function () {
-                    $('.header-web').removeClass('activemenubar');
-                    $(".dfn-menu-list-item").removeClass("active");
-                },500);
+                $('.dfn-menu .dfn-menu-list').removeClass('activenavbar');
             }
         });
     });
 
-    $(".dfn-menu-list-item")
-        .on("show.bs.dropdown", function(){
-            $(this).find('.dropdown-menu').addClass('fadeIn d-block');
-            $('.header-web').addClass('activemenubar');
-        })
-        .on("hide.bs.dropdown", function(){
-            $(this).find('.dropdown-menu').removeClass('fadeIn').addClass('fadeOut');
-            setTimeout(function () {
-                $(".dfn-menu-list-item").find('.dropdown-menu').removeClass("fadeOut d-block");
-                //$('.header-web').removeClass('activemenubar');
-            },750);
-        });
-
 }});
 /* Header Web Navbar Dropdown Menu */
-
-/* Site Dropdown Menu */
-$(window).on("load resize",function(e){if($(window).width() > 991){
-
-    $(".sitedropdown")
-        .on("show.bs.dropdown", function(){
-            $(this).find('.dropdown-menu').removeClass('fadeOut').addClass('fadeIn d-block');
-        })
-        .on("hide.bs.dropdown", function(){
-            $(this).find('.dropdown-menu').removeClass('fadeIn').addClass('fadeOut');
-            setTimeout(function () {
-                $(".sitedropdown").find('.dropdown-menu').removeClass("fadeOut d-block");
-            },500);
-        });
-
-}});
-/* Site Dropdown Menu */
 
 /* Tooltip */
 $(function(){

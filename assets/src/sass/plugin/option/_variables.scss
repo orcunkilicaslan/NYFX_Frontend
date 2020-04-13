@@ -7,8 +7,8 @@ $global-clr-cyan: #6397be;
 $global-clr-dark-black: #000000;
 $global-clr-soft-black: #232323;
 $global-clr-dark-blue: #12407D;
-$global-clr-soft-blue: #0D78C4;
-$global-clr-dark-gray: $global-clr-cyan;
+$global-clr-soft-blue: #5a9fff;
+$global-clr-dark-gray: #2e3647;
 $global-clr-soft-gray: #EDF5FB;
 /* General Color Settings */
 
@@ -28,7 +28,7 @@ $global-font-family-default:              $global-font-family-proximanova-regula
 $global-font-size:                        14px;
 $global-clr-text-light:                   $global-clr-soft-blue;
 $global-clr-text-dark:                    $global-clr-dark-blue;
-$global-border-light-gray:                darken($global-clr-soft-gray, 5%);
+$global-border-light-gray:                $global-clr-white;
 $global-border-light-gray-focus:          darken($global-clr-soft-gray, 15%);
 $global-input-border-light:               $global-border-light-gray;
 $global-input-border-light-focus:         $global-border-light-gray-focus;
@@ -47,13 +47,13 @@ $global-grdint-turquoise02: #00FFE5;
 /* Site Gradient Background Color */
 
 /* Site Main Image Path Settings */
-$global-img-path: "../../img/";
-$global-img-path-header: "../../img/header/";
-$global-img-path-footer: "../../img/footer/";
-$global-img-path-slider: "../../img/slider/";
-$global-img-path-section: "../../img/section/";
-$global-img-path-icons: "../../img/icons/";
-$global-img-path-svg: "../../img/svg/";
+$global-img-path: "../../img";
+$global-img-path-header: "../../img/header";
+$global-img-path-footer: "../../img/footer";
+$global-img-path-slider: "../../img/slider";
+$global-img-path-section: "../../img/section";
+$global-img-path-icons: "../../img/icons";
+$global-img-path-svg: "../../img/svg";
 /* Site Main Image Path Settings */
 
 /* Site Main Class Settings */
