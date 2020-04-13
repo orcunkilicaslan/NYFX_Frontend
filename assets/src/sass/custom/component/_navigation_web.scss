@@ -15,14 +15,41 @@
       background-color: darken($global-sitebg-darkblue01, 5%);
     }
 
+    &.activenavbar{
+      @include BootstrapMinWidthResponsive(lg){
+        #{$dfnnavclassname}-menu-list{
+          position: relative;
+
+          &::before{
+            content: "";
+            width: calc(100% - 40px);
+            height: 1px;
+            background-color: transparentize($global-clr-soft-blue, 0.5);
+            position: absolute;
+            bottom: 0;
+            left: 20px;
+          }
+        }
+        #{$dfnnavclassname}-menu-underline{
+          opacity: 1;
+        }
+      }
+    }
+
+    &-underline {
+      position: absolute;
+      border-bottom: 3px solid $global-clr-soft-blue !important;
+      @include translateX(-60px);
+      @include transition-multiple(left 0.3s ease-in-out, width 0.3s ease-in-out);
+      z-index: -1;
+      bottom: -1px;
+      opacity: 0;
+    }
+
     &-list{
       min-height: 38px;
       margin: 0;
       @include flexbox-display-flex-inline();
-
-      &.activenavbar{
-        border-bottom: 1px solid transparentize($global-clr-soft-blue, 0.5);
-      }
 
       @include BootstrapMaxWidthResponsive(lg){
         width: 100%;
@@ -35,15 +62,11 @@
           border-bottom: 1px solid $global-sitebg-darkblue01;
         }
 
-        @include BootstrapMinWidthResponsive(lg){
-          &:first-child > a{padding-left: 0;}
-          &:last-child > a{padding-right: 0;}
-        }
-
         > a{
           color:#FFFFFF;
           display: block;
           padding:10px 20px;
+          margin: 0;
           position:relative;
           height: 100%;
           white-space: nowrap;
@@ -175,7 +198,7 @@
               @include flexbox-flex(0 0 auto);
               width: auto;
               max-width: 100%;
-              padding: 10px 0 60px;
+              padding: 10px 5px 60px;
             }
           }
 

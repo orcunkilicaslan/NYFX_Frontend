@@ -6,6 +6,13 @@
 
   &-web{
     position: relative;
+
+    @include BootstrapMinWidthResponsive(lg){
+      > .container{
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
   }
 
   &-navigation{
@@ -88,9 +95,9 @@
       &-btns{
 
         .btn{
-          width: 150px;
+          width: 140px;
           height: 36px;
-          font-size: 20px;
+          font-size: 18px;
           font-weight: 500;
           line-height: 1;
           border: none;
