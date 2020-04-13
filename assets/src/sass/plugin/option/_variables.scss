@@ -9,7 +9,7 @@ $global-clr-soft-black: #232323;
 $global-clr-dark-blue: #12407D;
 $global-clr-soft-blue: #5a9fff;
 $global-clr-dark-gray: #2e3647;
-$global-clr-soft-gray: #EDF5FB;
+$global-clr-soft-gray: #828998;
 /* General Color Settings */
 
 /* Auxiliary Color Settings */
@@ -25,14 +25,14 @@ $global-font-family-proximanova-regular:  'ProximaNovaRegular';
 $global-font-family-proximanova-semi:     'ProximaNovaSemibold';
 $global-font-family-proximanova-bold:     'ProximaNovaBold';
 $global-font-family-default:              $global-font-family-proximanova-regular;
-$global-font-size:                        14px;
+$global-font-size:                        16px;
 $global-clr-text-light:                   $global-clr-soft-blue;
 $global-clr-text-dark:                    $global-clr-dark-blue;
-$global-border-light-gray:                $global-clr-white;
-$global-border-light-gray-focus:          darken($global-clr-soft-gray, 15%);
+$global-border-light-gray:                #d0d0d0;
+$global-border-light-gray-focus:          $global-clr-soft-blue;
 $global-input-border-light:               $global-border-light-gray;
 $global-input-border-light-focus:         $global-border-light-gray-focus;
-$global-input-disabled-light:             $global-clr-soft-gray;
+$global-input-disabled-light:             lighten($global-border-light-gray, 10%);
 /* Site Main Color Settings */
 
 /* Site Gradient Background Color */

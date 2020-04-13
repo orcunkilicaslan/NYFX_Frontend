@@ -56,13 +56,13 @@
     &-group{
       &.colorset{
         &disabled{
-          #{$formclassname}-control{background-color: $global-clr-soft-gray; border-color: $global-clr-soft-gray;}
+          #{$formclassname}-control{background-color: $global-input-disabled-light; border-color: $global-input-disabled-light;}
           #{$forminputclassname}-group{
             &:focus-within{
-              #{$forminputclassname}-group-append{border-color: $global-clr-soft-gray;}
+              #{$forminputclassname}-group-append{border-color: $global-input-disabled-light;}
             }
-            &-append{border-color: $global-clr-soft-gray;}
-            &-text{background-color: $global-clr-soft-gray;}
+            &-append{border-color: $global-input-disabled-light;}
+            &-text{background-color: $global-input-disabled-light;}
           }
         }
         &red{

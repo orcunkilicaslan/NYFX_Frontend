@@ -135,12 +135,8 @@
           @include animation-duration(0.75s);
           @include transition-multiple(top 0.3s ease-in-out);
 
-          @include BootstrapMaxWidthResponsive(1k){
-
-          }
-
           a{
-            color: #828998;
+            color: $global-clr-soft-gray;
             @include transition-multiple(color 0.15s ease-in-out);
 
             &:hover{
