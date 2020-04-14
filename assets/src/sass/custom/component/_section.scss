@@ -1,13 +1,33 @@
 
 .component{
 
-  &-sitefeature{
+  &-sitefeatureicons{
     @include flexbox-display-flex();
     @include flexbox-justify-content(space-between);
     text-align: center;
 
+    .owl {
+      &-stage {
+        &-outer {
+          @include BootstrapMinWidthResponsive(lg){
+            overflow: visible !important;
+          }
+        }
+      }
+    }
+
     li{
       padding: 15px;
+
+      &:hover{
+        .boxcontent-title{
+          &::before{
+            @include animation-duration(1s);
+            @include animation-iterationcount(infinite);
+            @include animation-name(ArrowTargetDown);
+          }
+        }
+      }
     }
 
     i[class*="icons"]{
@@ -15,28 +35,117 @@
       margin: auto;
     }
 
-    h4{
-      font-size: 16px;
-      line-height: 1.25;
-      padding-top: 35px;
-      position: relative;
+    .boxcontent{
+      &-title{
+        font-size: 16px;
+        line-height: 1.25;
+        padding-top: 35px;
+        position: relative;
 
-      &::before{
-        content: "";
+        &::before{
+          content: "";
+          position: absolute;
+          width: 0;
+          height: 0;
+          border-left: 8px solid transparent;
+          border-right: 8px solid transparent;
+          border-top: 10px solid $global-clr-soft-black;
+          @include border-radius(3px);
+          top: 8px;
+          left: 50%;
+          @include translateX(-50%);
+        }
+
+        @include keyframes(ArrowTargetDown){
+          0% {opacity: 1; @include transform-multiple(translateY(0) translateX(-50%) scale(1));}
+          100% {opacity: 0; @include transform-multiple(translateY(5px) translateX(-50%) scale(1.25));}
+        }
+
+        span{display: block;}
+      }
+    }
+  }
+
+  &-sitefeatureboxs{
+    @include flexbox-display-flex();
+    @include flexbox-justify-content(space-between);
+    text-align: center;
+
+    .owl {
+      &-stage {
+        &-outer {
+          @include BootstrapMinWidthResponsive(lg){
+            overflow: visible !important;
+          }
+        }
+      }
+    }
+
+    li{
+      background-color: $global-clr-white;
+      padding: 5px 45px 45px;
+      @include border-radius(10px);
+      @include box-shadow(0, 0, 20px, transparentize($global-clr-dark-black, 0.90));
+      @include transition-multiple(box-shadow 0.3s ease-in-out);
+
+      &:hover{
+        @include box-shadow(0, 0, 30px, transparentize($global-clr-dark-black, 0.80));
+
+        .boxicons{
+          i[class*="icons-out"]{
+            transform: rotate(30deg) scale(1.15);
+          }
+        }
+      }
+    }
+
+    .boxicons{
+      position: relative;
+      width: 200px;
+      height: 200px;
+      margin: auto;
+
+      i[class*="icons"]{
         position: absolute;
-        width: 0;
-        height: 0;
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        border-top: 10px solid $global-clr-soft-black;
-        @include border-radius(3px);
-        top: 8px;
-        left: 50%;
-        @include translateX(-50%);
+        top: 0;
+        display: block;
+        @include transition-multiple(transform 0.5s ease-in-out);
+      }
+      i[class*="icons-in"]{
+        z-index: 1;
+      }
+    }
+
+    .boxcontent{
+      margin-bottom: 15px;
+
+      &-title{
+        font-size: 25px;
+        font-weight: 600;
+        line-height: 1.2;
+        position: relative;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+
+        &::before{
+          content: "";
+          position: absolute;
+          width: 30px;
+          height: 2px;
+          background-color: $global-clr-soft-black;
+          bottom: 0;
+          left: 50%;
+          @include translateX(-50%);
+        }
       }
 
-      span{display: block;}
+      &-desc{
+        font-size: 18px;
+        font-weight: normal;
+        line-height: 1.22;
+      }
     }
+
   }
 
   &-summarytable{
@@ -71,7 +180,7 @@
 
         .btn-light{
           background-color: $global-clr-white;
-          border-color: $global-border-light-gray;
+          border-color: $global-clr-soft-gray;
           @include transition-multiple(background-color 0.15s ease-in-out);
 
           &:hover{
