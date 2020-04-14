@@ -217,4 +217,27 @@ $bootstrap-form-group-margin-bottom:                                    1.071rem
 $bootstrap-input-group-addon-color:                                     $bootstrap-input-color;
 $bootstrap-input-group-addon-bg:                                        $global-input-disabled-light;
 $bootstrap-input-group-addon-border-color:                              $bootstrap-input-border-color;
+
+$bootstrap-table-cell-padding:                                          .75rem;
+$bootstrap-table-cell-padding-sm:                                       .3rem;
+$bootstrap-table-color:                                                 $bootstrap-body-clr;
+$bootstrap-table-bg:                                                    null;
+$bootstrap-table-accent-bg:                                             rgba($bootstrap-black, .05);
+$bootstrap-table-hover-color:                                           $bootstrap-table-color;
+$bootstrap-table-hover-bg:                                              rgba($bootstrap-black, .075);
+$bootstrap-table-active-bg:                                             $bootstrap-table-hover-bg;
+$bootstrap-table-border-width:                                          $bootstrap-border-width;
+$bootstrap-table-border-color:                                          lighten($bootstrap-border-color, 10%) !global;;
+$bootstrap-table-head-bg:                                               $bootstrap-gray-200;
+$bootstrap-table-head-color:                                            $bootstrap-gray-700;
+$bootstrap-table-dark-color:                                            $bootstrap-white;
+$bootstrap-table-dark-bg:                                               $bootstrap-gray-800;
+$bootstrap-table-dark-accent-bg:                                        rgba($bootstrap-white, .05);
+$bootstrap-table-dark-hover-color:                                      $bootstrap-table-dark-color;
+$bootstrap-table-dark-hover-bg:                                         rgba($bootstrap-white, .075);
+$bootstrap-table-dark-border-color:                                     lighten($bootstrap-table-dark-bg, 7.5%);
+$bootstrap-table-striped-order:                                         odd;
+$bootstrap-table-caption-color:                                         $bootstrap-gray-600;
+$bootstrap-table-bg-level:                                              -9;
+$bootstrap-table-border-level:                                          -6;
 /* Bootstrap Variables Settings */

@@ -3,7 +3,6 @@
   margin: 0;
 
   thead tr th, tbody tr td{
-    border-color: $global-border-light-gray;
     vertical-align: middle;
     line-height: 1;
   }
@@ -25,8 +24,10 @@
     tr{
 
       &:last-child{
-        border-bottom: 1px solid;
-        border-color: $global-border-light-gray;
+        td{
+          border-bottom: 1px solid;
+          border-color: $bootstrap-table-border-color;
+        }
       }
 
       td{
