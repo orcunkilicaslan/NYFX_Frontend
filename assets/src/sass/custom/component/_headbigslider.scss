@@ -21,7 +21,7 @@
   &-owl{}
 
   &-item{
-    height: 560px;
+    height: 550px;
     padding-top: 60px;
 
     &-container{
@@ -66,6 +66,16 @@
       height: 100%;
       position: absolute;
       top: 0;
+
+      img{
+        width: auto !important;
+        max-width: none !important;
+        margin: auto;
+
+        @include BootstrapMinWidthResponsive(1k){
+          width: 100% !important;
+        }
+      }
     }
   }
 }

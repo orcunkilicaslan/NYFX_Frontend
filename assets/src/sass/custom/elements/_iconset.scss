@@ -32,13 +32,18 @@
     display: inline-block;
     position: relative;
 
-    &.sprite-12-dark{
-      background-image: url(#{$global-img-path-icons}/xxx.svg);
+    &.sprite-100-site-features{
+      background-image: url(#{$global-img-path-icons}/icons_spite_100_site_features.svg);
       background-position: 0 0;
-      width: 12px;
-      height: 12px;
+      width: 100px;
+      height: 80px;
 
-      &.icons-xxx{background-position: 0 0;}
+      &.icons-traders{background-position: 0 0;}
+      &.icons-executions{background-position: -100px 0;}
+      &.icons-locations{background-position: -200px 0;}
+      &.icons-regulations{background-position: -300px 0;}
+      &.icons-instruments{background-position: -400px 0;}
+      &.icons-executionsunder{background-position: -500px 0;}
     }
   }
 

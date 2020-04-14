@@ -3,6 +3,7 @@
   position: fixed;
   z-index: 10;
   padding: 20px;
+  @include transition-multiple(background 0.15s ease-in-out, padding 0.15s ease-in-out);
 
   &-web{
     position: relative;
@@ -22,7 +23,7 @@
 
       @include BootstrapMinWidthResponsive(lg){
         position: absolute;
-        top: 0;
+        top: 2px;
         left: 0;
       }
 
@@ -37,7 +38,7 @@
 
       @include BootstrapMinWidthResponsive(lg){
         position: absolute;
-        top: 0;
+        top: 5px;
         right: 0;
       }
 
@@ -126,6 +127,13 @@
         }
       }
     }
+  }
+
+  &.navscroll{
+    background-color: transparentize(darken($global-clr-dark-gray, 3%), 0.30) !important;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    @include backdrop-filter-multiple(blur(5px));
   }
 
 }

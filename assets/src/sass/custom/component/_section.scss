@@ -1,4 +1,44 @@
 
 .component{
 
+  &-sitefeature{
+    @include flexbox-display-flex();
+    @include flexbox-justify-content(space-between);
+    text-align: center;
+
+    li{
+      padding: 15px;
+    }
+
+    i[class*="icons"]{
+      display: block;
+      margin: auto;
+    }
+
+    h4{
+      font-size: 16px;
+      line-height: 1.25;
+      padding-top: 35px;
+      position: relative;
+
+      &::before{
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-top: 10px solid $global-clr-soft-black;
+        @include border-radius(3px);
+        top: 8px;
+        left: 50%;
+        @include translateX(-50%);
+      }
+
+      span{display: block;}
+    }
+  }
+
+  &-summarytable{}
+
 }
