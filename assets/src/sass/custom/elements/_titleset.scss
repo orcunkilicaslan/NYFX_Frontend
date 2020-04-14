@@ -4,254 +4,31 @@
   $sitetitleclassname: &;
 
   h1,h2,h3,h4,h5,h6,p{position: relative;}
-  h1,h2,h3,h4,h5,h6{
-    > span{display: inline-block;}
-  }
-  small{font-weight: normal !important; display: block;}
-  > strong{font-weight: 700;}
+  h1,h2,h3,h4,h5,h6{font-family: $global-font-family-proximanova-bold !important;}
   p{
-    color: $global-clr-text-dark;
     margin-bottom: 15px;
-    &:last-child{margin-bottom: 0;}
-
-    @include BootstrapMaxWidthResponsive(lg){
-      margin-bottom: 10px;
+    &:last-child{
+      margin-bottom: 0;
     }
   }
 
-  blockquote{
-    padding-left: 60px;
-    padding-top: 15px;
-    position: relative;
+  &-dark{
+    h1,h2,h3,h4,h5,h6{color: $global-clr-text-dark;}
+    p{color: $global-clr-text-light;}
+  }
 
-    &::before{
-      content: "";
-      width: 35px;
-      height: 30px;
-      background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNSIgaGVpZ2h0PSIzMCIgdmlld0JveD0iMCAwIDM1IDMwIj4NCiAgPGcgaWQ9IlF1b3RlIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIC0yOS4yMzUpIj4NCiAgICA8cGF0aCBpZD0iUGF0aF83NTgiIGRhdGEtbmFtZT0iUGF0aCA3NTgiIGQ9Ik0wLDQ0LjIzNXYxNUgxNXYtMTVINWExMC4wMTEsMTAuMDExLDAsMCwxLDEwLTEwdi01YTE1LjAxNiwxNS4wMTYsMCwwLDAtMTUsMTVaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIDApIiBmaWxsPSIjYzJlMTQyIi8+DQogICAgPHBhdGggaWQ9IlBhdGhfNzU5IiBkYXRhLW5hbWU9IlBhdGggNzU5IiBkPSJNMjQ4Ljg4MiwzNC4yMzV2LTVhMTUuMDE2LDE1LjAxNiwwLDAsMC0xNSwxNXYxNWgxNXYtMTVoLTEwQTEwLjAxMSwxMC4wMTEsMCwwLDEsMjQ4Ljg4MiwzNC4yMzVaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjEzLjg4MikiIGZpbGw9IiNjMmUxNDIiLz4NCiAgPC9nPg0KPC9zdmc+DQo=");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
-      position: absolute;
-      left: 0;
-      top: 0;
-    }
-
-    p{font-size: 20px;}
-    small{
-      font-size: 18px;
-      font-weight: normal !important;
-    }
-
-    @include BootstrapMaxWidthResponsive(1k){
-      padding-left: 45px;
-      padding-top: 10px;
-
-      p{font-size: 18px;}
-      small{font-size: 16px;}
-
-      &::before{
-        width: 30px;
-      }
-    }
-    @include BootstrapMaxWidthResponsive(md){
-      padding-left: 35px;
-      padding-top: 12px;
-
-      p{font-size: 16px;}
-      small{font-size: 14px;}
-
-      &::before{
-        width: 25px;
-      }
-    }
-
+  &-soft{
+    h1,h2,h3,h4,h5,h6{color: $global-clr-white;}
+    p{color: $global-clr-white;}
   }
 
   &-xl{
-    h1,h2,h3,h4,h5,h6{font-size: 36px; font-weight: 500; line-height: 1.15; letter-spacing: -1.14px;}
-    small{font-size: 22px; letter-spacing: -0.72px;}
-    span{}
-    h1+span,h2+span,h3+span{font-size: 20px; letter-spacing: -0.72px; display: block;}
-    p{font-size: 16px; font-weight: normal; line-height: 1.25; letter-spacing: -0.16px;}
-    ul{font-size: 16px; font-weight: normal; line-height: 1.25; letter-spacing: -0.16px;}
-    h1+p,h2+p,p+h1,p+h2,ul+h1,ul+h2,p+h1,p+h2,ul+h1,ul+h2{margin-top: 15px;}
-    h3+p,h4+p,h5+p,h6+p,p+h3,p+h4,p+h5,p+h6,ul+h3,ul+h4,ul+h5,ul+h6,p+h3,p+h4,p+h5,p+h6,ul+h3,ul+h4,ul+h5,ul+h6{margin-top: 10px;}
-    ul > li{margin-bottom: 10px;}
-    ul > li:last-child{margin-bottom: 0;}
-
-    @include BootstrapMaxWidthResponsive(1k){
-      small{font-size: 20px;}
-      h1,h2,h3,h4,h5,h6{font-size: 32px;}
-      h1+span,h2+span,h3+span{font-size: 18px;}
-      p, ul{font-size: 15px;}
-      h1+p,h2+p,p+h1,p+h2,ul+h1,ul+h2,p+h1,p+h2,ul+h1,ul+h2{margin-top: 10px;}
-    }
-    @include BootstrapMaxWidthResponsive(lg){
-      small{font-size: 18px;}
-      h1,h2,h3,h4,h5,h6{font-size: 28px;}
-      h1+span,h2+span,h3+span{font-size: 16px;}
-      p, ul{font-size: 14px;}
-    }
-    @include BootstrapMaxWidthResponsive(md){
-      small{font-size: 16px;}
-      h1,h2,h3,h4,h5,h6{font-size: 24px;}
-      h1+p,h2+p,p+h1,p+h2,ul+h1,ul+h2,p+h1,p+h2,ul+h1,ul+h2{margin-top: 5px;}
-    }
+    h1,h2,h3,h4,h5,h6{font-size: 40px;}
+    p{font-size: 18px; line-height: 1.39;}
+    h1+p,h2+p,p+h1,p+h2{margin-top: 10px;}
   }
 
-  &-lg{
-    h1,h2,h3,h4,h5,h6{font-size: 28px; font-weight: 500; line-height: 1; letter-spacing: -0.84px;}
-    small{font-size: 24px; letter-spacing: -0.72px;}
-    p{font-size: 16px; font-weight: normal; line-height: 1.25; letter-spacing: -0.16px;}
-    ul{font-size: 16px; font-weight: normal; line-height: 1.25; letter-spacing: -0.16px;}
-    h1+p,h2+p,p+h1,p+h2,ul+h1,ul+h2,p+h1,p+h2,ul+h1,ul+h2{margin-top: 15px;}
-    h3+p,h4+p,h5+p,h6+p,p+h3,p+h4,p+h5,p+h6,ul+h3,ul+h4,ul+h5,ul+h6,p+h3,p+h4,p+h5,p+h6,ul+h3,ul+h4,ul+h5,ul+h6{margin-top: 10px;}
-    ul > li{margin-bottom: 10px;}
-    ul > li:last-child{margin-bottom: 0;}
-
-    @include BootstrapMaxWidthResponsive(1k){
-      small{font-size: 20px;}
-      h1,h2,h3,h4,h5,h6{font-size: 24px;}
-      p, ul{font-size: 15px;}
-      h1+p,h2+p,p+h1,p+h2,ul+h1,ul+h2,p+h1,p+h2,ul+h1,ul+h2{margin-top: 10px;}
-    }
-    @include BootstrapMaxWidthResponsive(md){
-      small{font-size: 18px;}
-      h1,h2,h3,h4,h5,h6{font-size: 22px;}
-    }
-  }
-
-  &-md{
-    h1,h2,h3,h4,h5,h6{font-size: 26px; font-weight: 500; line-height: 1; letter-spacing: -0.84px;}
-    small{font-size: 20px; letter-spacing: -0.72px;}
-    span{line-height: 2; letter-spacing: -.16px;}
-    p{font-size: 16px; font-weight: normal; line-height: 1.2; letter-spacing: -0.45px;}
-    ul{font-size: 16px; font-weight: normal; line-height: 1.2; letter-spacing: -0.45px;;}
-    h1+p,h2+p,p+h1,p+h2,ul+h1,ul+h2,p+h1,p+h2,ul+h1,ul+h2{margin-top: 15px;}
-    h3+p,h4+p,h5+p,h6+p,p+h3,p+h4,p+h5,p+h6,ul+h3,ul+h4,ul+h5,ul+h6,p+h3,p+h4,p+h5,p+h6,ul+h3,ul+h4,ul+h5,ul+h6{margin-top: 10px;}
-    ul > li{margin-bottom: 10px;}
-    ul > li:last-child{margin-bottom: 0;}
-  }
-
-  &-sm{
-    h1,h2,h3,h4,h5,h6{font-size: 22px; font-weight: 500; line-height: 1.09; letter-spacing: -0.6px;}
-    small{font-size: 16px; letter-spacing: -0.45px;}
-    p{font-size: 16px; font-weight: normal; line-height: 1.25; letter-spacing: -0.45px;}
-    ul{font-size: 16px; font-weight: normal; line-height: 1.25; letter-spacing: -0.45px;}
-    h1+p,h2+p,p+h1,p+h2,ul+h1,ul+h2,p+h1,p+h2,ul+h1,ul+h2{margin-top: 10px;}
-    h3+p,h4+p,h5+p,h6+p,p+h3,p+h4,p+h5,p+h6,ul+h3,ul+h4,ul+h5,ul+h6,p+h3,p+h4,p+h5,p+h6,ul+h3,ul+h4,ul+h5,ul+h6{margin-top: 10px;}
-    ul > li{margin-bottom: 10px;}
-    ul > li:last-child{margin-bottom: 0;}
-
-    @include BootstrapMaxWidthResponsive(1k){
-      h1,h2,h3,h4,h5,h6{font-size: 20px;}
-      p, ul{font-size: 15px;}
-      h3+p,h4+p,h5+p,h6+p,p+h3,p+h4,p+h5,p+h6,ul+h3,ul+h4,ul+h5,ul+h6,p+h3,p+h4,p+h5,p+h6,ul+h3,ul+h4,ul+h5,ul+h6{margin-top: 5px;}
-    }
-    @include BootstrapMaxWidthResponsive(lg){
-      h1,h2,h3,h4,h5,h6{font-size: 18px;}
-      p, ul{font-size: 14px;}
-    }
-  }
-
-  &-xs{
-    h1,h2,h3,h4,h5,h6{font-size: 18px; font-weight: 500; line-height: 1.2; letter-spacing: -0.6px;}
-    small{font-size: 16px; letter-spacing: -0.16px;}
-    p{font-size: 14px; font-weight: normal;  line-height: 1.13; letter-spacing: -0.16px; margin-bottom: 10px;}
-    ul{font-size: 14px; font-weight: normal; line-height: 1.13; letter-spacing: -0.16px;}
-    h1+p,h2+p,p+h1,p+h2,ul+h1,ul+h2,p+h1,p+h2,ul+h1,ul+h2{margin-top: 5px;}
-    h3+p,h4+p,h5+p,h6+p,p+h3,p+h4,p+h5,p+h6,ul+h3,ul+h4,ul+h5,ul+h6,p+h3,p+h4,p+h5,p+h6,ul+h3,ul+h4,ul+h5,ul+h6{margin-top: 5px;}
-    ul > li{margin-bottom: 5px;}
-    ul > li:last-child{margin-bottom: 0;}
-  }
-
-  &-line{
-
-    h1,h2,h3,h4,h5,h6{
-      &::before{
-        content: "";
-        background-image: url(#{$global-img-path-svg}/site_titleset_darkline_center.svg);
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: contain;
-        position: absolute;
-        bottom: 0;
-      }
-    }
-
-    &#{$sitetitleclassname}-xl,
-    &#{$sitetitleclassname}-md{
-      h1,h2,h3,h4,h5,h6{
-        padding-bottom: 30px;
-
-        @include BootstrapMaxWidthResponsive(1k){
-          padding-bottom: 25px;
-        }
-        @include BootstrapMaxWidthResponsive(md){
-          padding-bottom: 20px;
-        }
-
-        &::before{
-          width: 232px;
-          height: 18px;
-
-          @include BootstrapMaxWidthResponsive(md){
-            height: 14px;
-          }
-        }
-      }
-    }
-
-    &#{$sitetitleclassname}-sm{
-      h1,h2,h3,h4,h5,h6{
-        padding-bottom: 35px;
-
-        &::before{
-          width: 232px;
-          height: 18px;
-        }
-      }
-    }
-  }
-
-  &-width500{max-width: 500px;}
-  &-width800{max-width: 800px;}
-  &-width900{max-width: 900px;}
-  &-width1100{max-width: 1100px;}
-
-  &-mb40{margin-bottom: 40px;}
-
-  &-center{
-    text-align: center;
-
-    h1,h2,h3,h4,h5,h6{
-      &::before{
-        left: 50%;
-        transform: translateX(-50%);
-      }
-    }
-  }
-
-  &-left{
-    text-align: left;
-
-    h1,h2,h3,h4,h5,h6{
-      &::before{
-        left: 0;
-      }
-    }
-  }
-
-  &-right{
-    text-align: right;
-
-    h1,h2,h3,h4,h5,h6{
-      &::before{
-        left: 0;
-      }
-    }
-  }
+  &-center{text-align: center;}
 
   &-flex{
     @include flexbox-display-flex();
@@ -259,26 +36,10 @@
     @include flexbox-align-items(flex-end);
   }
 
-  &-dark{
-    h1,h2,h3,h4,h5,h6{color: $global-clr-text-dark;}
-    small{color: $global-clr-text-light;}
-  }
-
-  &-soft{
-    h1,h2,h3,h4,h5,h6{color: $global-clr-white;}
-    small{color: $global-clr-text-light;}
-    p{color: $global-clr-white;}
-  }
-
-  &-group{
-    #{$sitetitleclassname}{
-      margin-bottom: 40px;
-
-      &:last-child{
-        margin-bottom: 0;
-      }
-    }
-  }
+  &-width600{max-width: 600px;}
+  &-width700{max-width: 700px;}
+  &-width800{max-width: 800px;}
+  &-width900{max-width: 900px;}
 }
 
 @media print{
