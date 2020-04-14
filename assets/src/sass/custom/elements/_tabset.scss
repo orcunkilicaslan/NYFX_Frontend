@@ -1,37 +1,37 @@
 .sitetabs{
 
   .nav{
+
     &-center{
       @include flexbox-justify-content(center);
     }
-    &-btn{
-      .nav{
 
-        &-item{
-          margin: 0 5px;
-        }
+    &-space-between{
+      @include flexbox-justify-content(space-between);
+    }
 
-        &-link{
-          color: $global-clr-text-dark;
-          font-size: 20px;
-          font-weight: normal;
-          line-height: 1.2;
-          letter-spacing: -0.6px;
-          padding-left: 2rem;
-          padding-right: 2rem;
-          border: none;
-          @include border-radius(40px);
-          @include transition-multiple(background-color 0.1s ease-in-out);
+    &-tabs{
+      border-bottom: none;
+    }
 
-          &:hover{
-            background-color: lighten($global-border-light-gray, 20%);
-          }
+    &-item{
+      margin: 0;
+    }
 
-          &.active{
-            color: $global-clr-white;
-            @include background-gradient($global-grdint-red01, $global-grdint-red02);
-          }
-        }
+    &-link{
+      color: $global-clr-text-dark;
+      font-family: $global-font-family-proximanova-bold !important;
+      font-size: 18px;
+      padding: 1rem 0.75rem;
+      border: none;
+      @include transition-multiple(color 0.15s ease-in-out);
+
+      &:hover{
+        color: lighten($global-clr-text-dark, 30%);
+      }
+
+      &.active{
+        color: $global-clr-soft-blue;
       }
     }
   }
