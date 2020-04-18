@@ -18,16 +18,6 @@
 
     li{
       padding: 15px;
-
-      &:hover{
-        .boxcontent-title{
-          &::before{
-            @include animation-duration(1s);
-            @include animation-iterationcount(infinite);
-            @include animation-name(ArrowTargetDown);
-          }
-        }
-      }
     }
 
     i[class*="icons"]{
@@ -37,6 +27,7 @@
 
     .boxcontent{
       &-title{
+        font-family: $global-font-family-default !important;
         font-size: 16px;
         line-height: 1.25;
         padding-top: 35px;
@@ -54,11 +45,6 @@
           top: 8px;
           left: 50%;
           @include translateX(-50%);
-        }
-
-        @include keyframes(ArrowTargetDown){
-          0% {opacity: 1; @include transform-multiple(translateY(0) translateX(-50%) scale(1));}
-          100% {opacity: 0; @include transform-multiple(translateY(5px) translateX(-50%) scale(1.25));}
         }
 
         span{display: block;}
@@ -144,8 +130,15 @@
         font-weight: normal;
         line-height: 1.22;
       }
+
+      &-more{
+        color: $global-clr-soft-blue;
+        font-size: 18px;
+        font-weight: 500;
+      }
     }
 
+    .featuresbox{}
   }
 
   &-summarytable{
@@ -189,6 +182,82 @@
             border-color: $global-clr-green;
           }
         }
+      }
+    }
+  }
+
+  &-siteaccounttypes{
+    @include flexbox-display-flex();
+    @include flexbox-justify-content(space-between);
+    text-align: center;
+
+    li{
+
+      .boxcontent{
+        border-right: 1px solid $global-clr-soft-black;
+      }
+
+      &:first-child{
+        .boxcontent{
+          padding-left: 0;
+        }
+      }
+      &:last-child{
+        .boxcontent{
+          padding-right: 0;
+          border-right: none;
+        }
+      }
+    }
+
+    i.icons-texttypes{
+      height: 44px;
+      font-family: $global-font-family-proximanova-thin !important;
+      font-size: 50px;
+      font-style: normal;
+      line-height: 1;
+      text-align: center;
+      display: block;
+      margin: 0 auto 10px;
+    }
+
+    .boxcontent{
+      padding: 0 25px;
+
+      &-title{
+        font-family: $global-font-family-proximanova-thin !important;
+        font-size: 20px;
+        font-weight: 100;
+        line-height: 1;
+        padding-bottom: 20px;
+        margin-bottom: 10px;
+        position: relative;
+
+        &::before{
+          content: "";
+          position: absolute;
+          width: 0;
+          height: 0;
+          border-left: 8px solid transparent;
+          border-right: 8px solid transparent;
+          border-top: 10px solid $global-clr-soft-black;
+          @include border-radius(3px);
+          bottom: 0;
+          left: 50%;
+          @include translateX(-50%);
+        }
+      }
+
+      &-desc{
+        font-size: 16px;
+        line-height: 1.25;
+      }
+
+      &-more{
+        color: $global-clr-soft-blue;
+        font-size: 18px;
+        font-weight: 500;
+        margin-top: 10px;
       }
     }
   }

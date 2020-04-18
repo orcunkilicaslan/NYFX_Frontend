@@ -100,7 +100,8 @@ audio:not([controls]) {
   height: 0;
 }
 
-h1,h2,h3,h4,h5,h6{
+h1,h2,h3,h4,h5,h6,strong{
+  font-family: $global-font-family-default-bold !important;
   font-weight: 500;
 }
 
