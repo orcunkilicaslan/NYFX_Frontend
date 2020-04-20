@@ -48,7 +48,7 @@ $bootstrap-line-height-lg:                1.6;
 $bootstrap-line-height-sm:                1.2;
 
 $bootstrap-body-bg:                       $global-clr-white;
-$bootstrap-body-clr:                      $global-clr-dark-blue;
+$bootstrap-body-clr:                      $global-clr-text-dark;
 $bootstrap-white:                         $global-clr-white;
 $bootstrap-black:                         $global-clr-dark-black;
 $bootstrap-gray-100:                      $global-clr-white;
@@ -78,6 +78,11 @@ $bootstrap-warning:                       $bootstrap-yellow;
 $bootstrap-danger:                        $bootstrap-red;
 $bootstrap-light:                         $bootstrap-gray-100;
 $bootstrap-dark:                          $bootstrap-gray-800;
+
+$bootstrap-link-color:                    $global-clr-text-dark;
+$bootstrap-link-decoration:               none;
+$bootstrap-link-hover-color:              darken($bootstrap-link-color, 15%);
+$bootstrap-link-hover-decoration:         underline;
 
 $bootstrap-border-width:                  1px;
 $bootstrap-border-color:                  $global-border-light-gray;
@@ -227,7 +232,7 @@ $bootstrap-table-hover-color:                                           $bootstr
 $bootstrap-table-hover-bg:                                              rgba($bootstrap-black, .075);
 $bootstrap-table-active-bg:                                             $bootstrap-table-hover-bg;
 $bootstrap-table-border-width:                                          $bootstrap-border-width;
-$bootstrap-table-border-color:                                          lighten($bootstrap-border-color, 10%) !global;;
+$bootstrap-table-border-color:                                          $global-border-light-gray-opacity !global;
 $bootstrap-table-head-bg:                                               $bootstrap-gray-200;
 $bootstrap-table-head-color:                                            $bootstrap-gray-700;
 $bootstrap-table-dark-color:                                            $bootstrap-white;
