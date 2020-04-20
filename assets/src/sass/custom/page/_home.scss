@@ -77,11 +77,11 @@
   }
 
   &-instruments{
-    padding: 60px 0;
+    padding: 60px 0 180px;
 
     $carousel-icons-circle-width: 166px;
 
-    .sitetitle{
+    .sitetitle-dark{
       padding-bottom: 135px;
     }
 
@@ -115,6 +115,7 @@
               margin: 0 auto 20px;
               @include border-radius(50%);
               @include box-shadow(20px, 20px, 5px, transparentize($global-clr-dark-gray, 0.75));
+              @include transition-multiple(background-color 0.15s ease-in-out);
             }
 
             &-title{
@@ -129,10 +130,20 @@
             }
           }
 
-          &[data-slide-to="0"].active a i{background-color: $global-clr-white;}
-          &[data-slide-to="1"].active a i{background-color: $global-clr-white;}
-          &[data-slide-to="2"].active a i{background-color: $global-clr-white;}
-          &[data-slide-to="3"].active a i{background-color: $global-clr-white;}
+          &.active{
+            .boxcontent-icons{
+              background-color: $global-clr-green;
+
+              i[class*="icons"]{
+                @include svg-filter(0%, 1, 0, 100%);
+              }
+            }
+          }
+
+          &[data-slide-to="0"].active{}
+          &[data-slide-to="1"].active{}
+          &[data-slide-to="2"].active{}
+          &[data-slide-to="3"].active{}
         }
       }
 
@@ -140,11 +151,66 @@
         min-height: 630px;
 
         &-inner{
-          padding-top: calc(#{$carousel-icons-circle-width} + 50px);
+          padding-top: calc(#{$carousel-icons-circle-width} + 100px);
+          position: absolute;
+          bottom: -205px;
         }
+
         &-item{
           color: $global-clr-white;
+
+          .sitetitle-soft{
+            padding-left: 130px;
+          }
         }
+
+        &-img{}
+
+        &-txt{}
+
+        &-btn{
+          width: 190px;
+          font-size: 20px;
+          font-weight: 500;
+          line-height: 1.35;
+          border: none;
+          margin: 20px 0 0 auto;
+          display: block;
+        }
+      }
+    }
+  }
+
+  &-news{
+    padding: 60px 0 80px;
+
+    .sitetitle{
+      padding-bottom: 55px;
+    }
+  }
+
+  &-mobileapps{
+    color: $global-clr-white;
+    background-image: url(#{$global-img-path-section}/mobile_apps_background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &-row{
+      @include flexbox-align-items(center);
+    }
+
+    &-img{
+      img{
+        position: relative;
+        left: -170px;
+      }
+    }
+
+    &-txt{
+
+      .sitetitle{
+        height: 100%;
       }
     }
   }

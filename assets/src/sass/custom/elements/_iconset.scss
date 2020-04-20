@@ -59,6 +59,18 @@
       &.icons-out-trader{background-position: -200px -200px;}
       &.icons-out-follow{background-position: -400px -200px;}
     }
+
+    &.sprite-80-site-instruments{
+      background-image: url(#{$global-img-path-icons}/icons_spite_80_site_instruments.svg);
+      background-position: 0 0;
+      width: 80px;
+      height: 80px;
+
+      &.icons-forex{background-position: 0 0;}
+      &.icons-indices{background-position: -80px 0;}
+      &.icons-commodities{background-position: -160px 0;}
+      &.icons-stocks{background-position: -240px 0;}
+    }
   }
 
 }

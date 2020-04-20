@@ -30,6 +30,7 @@ $global-font-size:                        16px;
 $global-clr-text-light:                   $global-clr-soft-black;
 $global-clr-text-dark:                    $global-clr-soft-black;
 $global-border-light-gray:                #d0d0d0;
+$global-border-light-gray-opacity:        lighten($global-border-light-gray, 10%);
 $global-border-light-gray-focus:          $global-clr-soft-blue;
 $global-input-border-light:               $global-border-light-gray;
 $global-input-border-light-focus:         $global-border-light-gray-focus;

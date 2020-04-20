@@ -42,30 +42,29 @@ $('#sitefeaturesboxsowl').owlCarousel({
 /* Features Icons Component */
 
 /* Home Instruments Carousel */
-$(document).ready( function() {
-    $(document).ready( function() {
+$(document).ready(function(){
 
-        $('#HomeInstrumentsCarousel').carousel({
-            interval: 2000
-        })
+    $('#HomeInstrumentsCarousel').carousel({
+        interval: 20000,
+        pause: "hover"
+    });
 
-        var clickEvent = false;
-        $('#HomeInstrumentsCarousel').on('click', '.nav a', function() {
-            clickEvent = true;
-            $('.nav li').removeClass('active');
-            $(this).parent().addClass('active');
-        }).on('slide.bs.carousel', function(e) {
-            if(!clickEvent) {
-                var count = $('.nav').children().length -1;
-                var current = $('.nav li.active');
-                current.removeClass('active').next().addClass('active');
-                var id = parseInt(current.data('slide-to'));
-                if(count == id) {
-                    $('.nav li').first().addClass('active');
-                }
+    var clickEvent = false;
+    $('#HomeInstrumentsCarousel').on('click', '.nav a', function() {
+        clickEvent = true;
+        $('.nav li').removeClass('active');
+        $(this).parent().addClass('active');
+    }).on('slide.bs.carousel', function(e) {
+        if(!clickEvent) {
+            var count = $('.nav').children().length -1;
+            var current = $('.nav li.active');
+            current.removeClass('active').next().addClass('active');
+            var id = parseInt(current.data('slide-to'));
+            if(count == id) {
+                $('.nav li').first().addClass('active');
             }
-            clickEvent = false;
-        });
+        }
+        clickEvent = false;
     });
 });
 /* Home Instruments Carousel */
