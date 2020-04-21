@@ -16,8 +16,8 @@
         &.active{
           .page-link{
             color: $global-clr-white;
-            background-color: $global-clr-soft-blue;
-            border-color: $global-clr-soft-blue;
+            background-color: $global-clr-red;
+            border-color: $global-clr-red;
           }
         }
 
@@ -83,8 +83,8 @@
         &.active,
         &:hover{
           color: $global-clr-white;
-          background-color: $global-clr-soft-blue;
-          border-color: $global-clr-soft-blue;
+          background-color: $global-clr-red;
+          border-color: $global-clr-red;
         }
       }
     }

@@ -202,7 +202,7 @@
 
         &::before{
           content: "";
-          background-color: $global-clr-soft-blue;
+          background-color: $global-clr-red;
           width: 2px;
           height: 100%;
           position: absolute;
@@ -356,8 +356,8 @@
               height: 9px;
               top: 8px;
               left: 0;
-              border-top:2px solid $global-clr-soft-blue;
-              border-right:2px solid $global-clr-soft-blue;
+              border-top:2px solid $global-clr-red;
+              border-right:2px solid $global-clr-red;
               @include rotate(45);
             }
           }
