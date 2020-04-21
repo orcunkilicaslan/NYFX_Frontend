@@ -26,7 +26,7 @@
   &:not(:disabled):not(.disabled).active:focus,
   &:not(:disabled):not(.disabled):active:focus{@include box-shadow-none-imp();}
 
-  i{@include svg-filter(0%, 1, 0, 100%);}
+  i[class*="icons-"]{@include svg-filter(0%, 1, 0, 100%);}
 
   &[class*="outline"]{
     i{@include svg-filter(100%, 0, 0, 100%);}

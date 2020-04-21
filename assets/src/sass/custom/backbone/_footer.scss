@@ -1,2 +1,86 @@
 
-.footer{}
+.footer{
+  color: $global-clr-soft-gray;
+
+  &-top{
+    background-color: $global-clr-dark-gray;
+
+    &-navigation{
+      @include flexbox-align-items(center);
+      padding: 80px 0 50px;
+    }
+
+    &-logo{}
+
+    &-navi{
+      padding-left: 50px;
+      margin-left: 30px;
+      border-left: 1px solid transparentize($global-border-light-gray, 0.85);
+
+      &-col{}
+
+      &-list{
+
+        h5{
+          color: $global-clr-white;
+          font-family: $global-font-family-proximanova-regular !important;
+          font-size: 16px;
+          line-height: 1.13;
+          padding-bottom: 7px;
+          margin-bottom: 10px;
+          position: relative;
+
+          &::before{
+            content: "";
+            background-color: $global-clr-soft-blue;
+            width: 70px;
+            height: 2px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+          }
+        }
+
+        li{
+          font-size: 16px;
+          line-height: 1.56;
+
+          a{
+            color: $global-clr-soft-gray;
+          }
+        }
+      }
+    }
+
+    &-risk{
+      padding: 35px 0 80px;
+      border-top: 1px solid transparentize($global-border-light-gray, 0.85);
+
+      h6{
+        font-size: 16px;
+        line-height: 1.56;
+      }
+
+      p{
+        font-size: 14px;
+        line-height: 1.79;
+        margin-bottom: 25px;
+
+        &:last-child{margin-bottom: 0;}
+
+        a{
+          color: $global-clr-soft-gray;
+          text-decoration: underline;
+        }
+      }
+
+    }
+  }
+
+  &-bottom{
+    background-color: $site-aux-clr-dark-gray;
+    border-top: 1px solid transparentize($global-border-light-gray, 0.85);
+    min-height: 100px;
+  }
+
+}
