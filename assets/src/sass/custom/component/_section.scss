@@ -290,6 +290,10 @@
           min-height: 350px;
           @include border-radius(10px);
         }
+        .pretty-embed iframe{
+          min-height: 350px;
+          @include border-radius(10px);
+        }
       }
     }
 
