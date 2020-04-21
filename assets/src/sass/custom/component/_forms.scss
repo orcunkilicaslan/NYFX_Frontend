@@ -1,5 +1,5 @@
 .sitemodalformbox{
-  background-color: transparentize($global-clr-soft-blue, 0.85);
+  background-color: transparentize($global-clr-red, 0.85);
   padding: 40px;
   @include border-radius(14px);
   @include box-shadow(0, 0, 20px, transparentize($global-clr-dark-black, 0.95));

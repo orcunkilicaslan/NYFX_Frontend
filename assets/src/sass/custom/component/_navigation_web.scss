@@ -24,7 +24,7 @@
             content: "";
             width: calc(100% - 40px);
             height: 1px;
-            background-color: transparentize($global-clr-soft-blue, 0.5);
+            background-color: transparentize($global-clr-red, 0.5);
             position: absolute;
             bottom: 0;
             left: 20px;
@@ -38,7 +38,7 @@
 
     &-underline {
       position: absolute;
-      border-bottom: 3px solid $global-clr-soft-blue !important;
+      border-bottom: 3px solid $global-clr-red !important;
       @include translateX(-60px);
       @include transition-multiple(left 0.3s ease-in-out, width 0.3s ease-in-out);
       z-index: -1;
@@ -99,14 +99,14 @@
                 display: none !important;
               }
               @include BootstrapMaxWidthResponsive(lg){
-                border-right-color: $global-clr-soft-blue !important;
-                border-top-color: $global-clr-soft-blue !important;
+                border-right-color: $global-clr-red !important;
+                border-top-color: $global-clr-red !important;
               }
             }
           }
 
           &[aria-expanded="true"]{
-            color: $global-clr-soft-blue;
+            color: $global-clr-red;
 
             &::before{
               @include BootstrapMinWidthResponsive(lg){
@@ -114,8 +114,8 @@
                 @include svg-filter(0%, 1, 0, 100%);
               }
               @include BootstrapMaxWidthResponsive(lg){
-                border-right-color: $global-clr-soft-blue !important;
-                border-top-color: $global-clr-soft-blue !important;
+                border-right-color: $global-clr-red !important;
+                border-top-color: $global-clr-red !important;
               }
             }
           }
@@ -175,8 +175,8 @@
                   height: 8px;
                   top: 10px;
                   left: 0;
-                  border-top:2px solid $global-clr-soft-blue;
-                  border-right:2px solid $global-clr-soft-blue;
+                  border-top:2px solid $global-clr-red;
+                  border-right:2px solid $global-clr-red;
                   @include rotate(45);
                   @include transition-multiple(border 0.15s ease-in-out);
                   display: none;
