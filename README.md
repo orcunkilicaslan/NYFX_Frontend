@@ -1,7 +1,7 @@
 # NYFX Frontend
 
 #### Web Public Area Frontend List
- - [01_NYFX_Home_Page](https://orcunkilicaslan.github.io/NYFX_Frontend/01_NYFX_Home_Page.html)
+ - [01_NYFX_Home_Page_Form](https://orcunkilicaslan.github.io/NYFX_Frontend/01_NYFX_Home_Page_Form.html)
  - [99_Component_Form_UI](https://orcunkilicaslan.github.io/NYFX_Frontend/99_Component_Form_UI.html)
    
    
