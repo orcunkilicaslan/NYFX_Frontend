@@ -1,14 +1,25 @@
 /* Form UI New */
 .siteformuilabel{
 
+  .form-group{
+    margin-bottom: 7px;
+    position: relative;
+  }
+
+  #{$formcustomclassname}-select{
+    background-color: transparent;
+    color: $global-clr-soft-gray !important;
+  }
+
   .labelanimation{
     position: relative;
     z-index: 0;
 
     label{
+      color: $global-clr-soft-gray !important;
       position:absolute;
       top: 10px;
-      left: 0;
+      left: 0.80rem;
       margin: 0;
       z-index: -1;
       @include transition(all, 0.3s, ease-in-out);
@@ -137,6 +148,7 @@
     position: relative;
     display: block;
     z-index: 3;
+    display: none;
 
     &::before,
     &::after {
@@ -162,7 +174,9 @@
 
   .msginput{
     &.error{
-      top: -6px;
+      font-size: 10px;
+      top: 4px !important;
+      right: 0.80rem;
     }
   }
 
@@ -206,7 +220,8 @@
     .labelanimation{
 
       label{
-        top: 12px;
+        font-size: 16px;
+        top: 9px;
       }
 
       &[class*="col"]{
@@ -217,22 +232,25 @@
 
       #{$formclassname}-control{
         border-color: $global-border-light-gray !important;
-        padding-left: 0.9rem;
+        padding-left: 0.75rem;
         padding-bottom: 0;
         padding-top: 12px;
 
         &:focus ~ label,
         &:valid ~ label,
         &:invalid ~ label{
+          font-size: 10px;
           top: 6px;
         }
 
         &:focus-within ~ label{
+          font-size: 10px;
           top: 6px;
         }
 
         &:focus ~ .msginput,
         &:valid ~ .msginput{
+          font-size: 10px;
           top: 6px;
         }
       }

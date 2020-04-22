@@ -153,6 +153,12 @@ $(window).on("load resize",function(e){if($(window).width() > 991){
 }});
 /* Header Web Navbar Dropdown Menu */
 
+/* Dropdown Menu Form Fixed */
+$('.dropdown-menu input, .dropdown-menu select, .dropdown-menu label').click(function(e) {
+    e.stopPropagation();
+});
+/* Dropdown Menu Form Fixed */
+
 /* Tooltip */
 $(function(){
     $('[data-toggle="tooltip"]').tooltip()

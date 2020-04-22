@@ -180,7 +180,7 @@
   #{$formcustomclassname}{
 
     &-select{
-      background: $global-clr-white url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMS41IiBoZWlnaHQ9IjYuODExIiB2aWV3Qm94PSIwIDAgMTEuNSA2LjgxMSI+CiAgICA8ZGVmcz4KICAgICAgICA8c3R5bGU+CiAgICAgICAgICAgIC5jbHMtMXtmaWxsOm5vbmU7c3Ryb2tlOiMwMDQzNzg7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLW1pdGVybGltaXQ6MTA7c3Ryb2tlLXdpZHRoOjEuNXB4fQogICAgICAgIDwvc3R5bGU+CiAgICA8L2RlZnM+CiAgICA8cGF0aCBpZD0iQXJyb3ciIGQ9Ik0xMCAwTDUuMDA2IDUgMCAwIiBjbGFzcz0iY2xzLTEiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC43NSAuNzUpIi8+Cjwvc3ZnPgo=") no-repeat right 12px center;
+      background: $global-clr-white url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNC4yMDIiIGhlaWdodD0iNy42MDEiIHZpZXdCb3g9IjAgMCAxNC4yMDIgNy42MDEiPg0KICA8cGF0aCBpZD0iQXJyb3ciIGQ9Ik0xNDA5LDQ2MS4xMTdsNi4zOTQtNi4zOTRMMTQwOSw0NDguMzMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQ2MS44MjQgLTE0MDguMjkzKSByb3RhdGUoOTApIiBmaWxsPSJub25lIiBzdHJva2U9IiM3NTc3ODUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxIi8+DQo8L3N2Zz4NCg==") no-repeat right 12px center;
       cursor: pointer;
 
       &:focus{@include box-shadow-none-imp();}
