@@ -18,6 +18,12 @@
 
     li{
       padding: 15px;
+
+      &:hover{
+        .boxcontent-title::before{
+          border-top-color: $global-clr-red;
+        }
+      }
     }
 
     i[class*="icons"]{
@@ -45,6 +51,7 @@
           top: 8px;
           left: 50%;
           @include translateX(-50%);
+          @include transition-multiple(border-color 0.3s ease-in-out);
         }
 
         span{display: block;}
@@ -138,7 +145,35 @@
       }
     }
 
-    .featuresbox{}
+    .featuresbox{
+      &starters{
+        .boxcontent-more{
+          color: $global-clr-green;
+          svg{
+            line,
+            path{stroke: $global-clr-green !important;}
+          }
+        }
+      }
+      &trader{
+        .boxcontent-more{
+          color: $global-clr-soft-purple;
+          svg{
+            line,
+            path{stroke: $global-clr-soft-purple !important;}
+          }
+        }
+      }
+      &follow{
+        .boxcontent-more{
+          color: $global-clr-red;
+          svg{
+            line,
+            path{stroke: $global-clr-red !important;}
+          }
+        }
+      }
+    }
   }
 
   &-summarytable{
@@ -258,6 +293,11 @@
         font-size: 18px;
         font-weight: 500;
         margin-top: 10px;
+
+        svg{
+          line,
+          path{stroke: $global-clr-red !important;}
+        }
       }
     }
   }
@@ -314,13 +354,21 @@
 
         }
         &-info{
-          display: flex;
-          justify-content: space-between;
+          @include flexbox-display-flex();
+          @include flexbox-justify-content(space-between);
           margin-top: 5px;
           padding-bottom: 15px;
           border-bottom: 1px solid $global-border-light-gray-opacity;
-        }
 
+          &-date{}
+
+          &-more{
+            svg{
+              line,
+              path{stroke: $global-clr-red !important;}
+            }
+          }
+        }
       }
     }
   }
