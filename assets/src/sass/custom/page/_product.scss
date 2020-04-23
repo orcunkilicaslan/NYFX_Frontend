@@ -10,4 +10,20 @@
     }
   }
 
+  &-summarytable{
+    padding: 40px 0;
+
+    .sitetitle{
+      padding-bottom: 30px;
+    }
+  }
+
+  &-news{
+    padding: 60px 0 80px;
+
+    .sitetitle{
+      padding-bottom: 55px;
+    }
+  }
+
 }

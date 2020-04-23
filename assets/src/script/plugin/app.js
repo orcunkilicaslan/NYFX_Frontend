@@ -55,16 +55,19 @@ jQuery(function($) {
             //var bodyHeight = window.innerHeight;
             var scroll = $(window).scrollTop();
             var headerHeight = $("header.header");
+            var headTitle = $("section.headtitle");
 
             if (scroll > (headerHeight.height() / 3)) {
                 headerHeight.addClass("navscroll");
+                headTitle.addClass("navscroll");
             } else {
                 headerHeight.removeClass("navscroll");
+                headTitle.removeClass("navscroll");
             }
 
         }).on("load resize",function(e){
-            var headerHeight = $("header.header");
-            $("header + section").css("min-height", headerHeight.height() + "px").css("padding-top", headerHeight.height() + "px");
+            // var headerHeight = $("header.header");
+            // $("header + section").css("min-height", headerHeight.height() + "px").css("padding-top", headerHeight.height() + "px");
         });
     } else {
         $(window).on("load resize scroll",function(e){

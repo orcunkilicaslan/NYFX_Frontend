@@ -307,7 +307,6 @@
     .headbignews{
       border-bottom: 1px solid $global-border-light-gray-opacity;
       padding-bottom: 30px;
-      margin-bottom: 20px;
 
       &-content{
 
@@ -341,6 +340,10 @@
 
       .listnews{
 
+        li{
+          padding-top: 20px;
+        }
+
         &-title{
 
           h4,p{
@@ -353,6 +356,7 @@
           }
 
         }
+
         &-info{
           @include flexbox-display-flex();
           @include flexbox-justify-content(space-between);
@@ -363,6 +367,8 @@
           &-date{}
 
           &-more{
+            font-weight: bold;
+
             svg{
               line,
               path{stroke: $global-clr-red !important;}
