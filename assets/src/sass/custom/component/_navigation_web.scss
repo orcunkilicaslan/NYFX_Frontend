@@ -49,7 +49,8 @@
     &-list{
       min-height: 38px;
       margin: 0;
-      @include flexbox-display-flex-inline();
+      @include flexbox-display-flex();
+      @include flexbox-justify-content(center);
 
       @include BootstrapMaxWidthResponsive(lg){
         width: 100%;
@@ -141,7 +142,7 @@
             @include transition-multiple(color 0.15s ease-in-out);
 
             &:hover{
-              color: #b2b9c9;
+              color: lighten($global-clr-soft-gray, 20%);
             }
           }
 
