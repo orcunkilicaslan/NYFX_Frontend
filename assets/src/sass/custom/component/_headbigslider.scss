@@ -4,6 +4,8 @@
   background-color: $site-aux-clr-dark-gray;
   position: relative;
 
+  $headbigslider-bottom-icons-height: 330px;
+
   &::before{
     content: "";
     width: 100%;
@@ -18,65 +20,145 @@
     z-index: 2;
   }
 
-  &-owl{}
+  &-slider{
 
-  &-item{
-    height: 100vh;
-    min-height: 800px;
-    padding-top: 60px;
+    &-owl{}
+
+    &-item{
+      height: 100vh;
+      min-height: 800px;
+      padding-top: 60px;
+
+      &-container{
+        @include flexbox-display-flex();
+        @include flexbox-align-items(center);
+        @include flexbox-justify-content(center);
+        height: calc(100% - #{$headbigslider-bottom-icons-height});
+        padding-top: 70px;
+        padding-bottom: 70px;
+        position: relative;
+        z-index: 3;
+      }
+
+      &-content{
+        text-align: center;
+      }
+
+      &-title{
+        max-width: 700px;
+
+        .slidertitle{
+          font-family: $global-font-family-proximanova-bold !important;
+          font-size: 44px;
+          line-height: 0.9;
+          @include text-stroke(2, transparentize(darken($global-clr-red, 15%), 0.3));
+        }
+
+        .sliderdesc{
+          font-family: $global-font-family-proximanova-thin !important;
+          font-size: 20px;
+          font-weight: normal;
+          line-height: 1;
+          margin-top: 10px;
+          @include text-stroke(2, transparentize($global-clr-dark-black, 0.85));
+        }
+
+        .sliderbtns{
+          @include flexbox-display-flex-inline();
+          @include flexbox-justify-content(center);
+          background-color: transparentize($global-clr-dark-black, 0.6);
+          margin: 20px auto 0;
+          padding: 5px;
+          @include border-radius(4px);
+
+          > .btn{
+            color: $global-clr-white;
+            width: 220px;
+            height: 45px;
+            font-size: 18px;
+            line-height: 1.9;
+            border: none;
+
+            &:first-child{
+              @include border-radii(4px,0,0,4px);
+            }
+            &:last-child{
+              @include border-radii(0,4px,4px,0);
+            }
+
+            &.btn-danger{
+              background-color: $global-clr-red;
+            }
+            &.btn-success{
+              background-color: $global-clr-green;
+            }
+          }
+        }
+      }
+
+      &-bg{
+        @include flexbox-display-flex();
+        @include flexbox-align-items(center);
+        @include flexbox-justify-content(center);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+
+        img{
+          //width: auto !important;
+          //max-width: none !important;
+          margin: auto;
+          height: 100%;
+
+          @include BootstrapMinWidthResponsive(1k){
+            width: 100% !important;
+          }
+        }
+      }
+    }
+  }
+
+  &-features{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    overflow: hidden;
 
     &-container{
-      @include flexbox-display-flex();
-      @include flexbox-align-items(center);
-      @include flexbox-justify-content(center);
-      height: 100%;
-      padding-top: 70px;
-      padding-bottom: 70px;
+      background-color: transparentize($global-clr-dark-black, 0.3);
+      min-height: #{$headbigslider-bottom-icons-height};
+      @include border-radii(10px,10px,0,0);
       position: relative;
-      z-index: 3;
+
+      &::before,
+      &::after{
+        content: "";
+        background-color: transparentize($global-clr-dark-black, 0.3);
+        position: absolute;
+        width: 5000px;
+        height: 50%;
+        bottom: 0;
+      }
+
+      &::before{
+        left: -5000px;
+      }
+
+      &::after{
+        right: -5000px;
+      }
     }
-    &-content{
+
+    &-headtitle{
       text-align: center;
-    }
-    &-title{
-      .slidertitle{
-        font-size: 50px;
-        line-height: 0.9;
-      }
-      .sliderdesc{
-        font-family: $global-font-family-proximanova-thin !important;
-        font-size: 20px;
-        font-weight: normal;
-        line-height: 1;
-        margin-top: 10px;
-      }
-      .sliderbtn{
-        width: 190px;
-        font-size: 20px;
-        font-weight: 500;
-        line-height: 1.35;
-        border: none;
-        margin-top: 20px;
-      }
-    }
-    &-bg{
-      @include flexbox-display-flex();
-      @include flexbox-align-items(center);
-      @include flexbox-justify-content(center);
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
+      padding: 30px 0 20px;
 
-      img{
-        //width: auto !important;
-        //max-width: none !important;
-        margin: auto;
-        height: 100%;
-
-        @include BootstrapMinWidthResponsive(1k){
-          width: 100% !important;
-        }
+      h1, h2{
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 1.06;
       }
     }
   }

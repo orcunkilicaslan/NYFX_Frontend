@@ -101,8 +101,10 @@ audio:not([controls]) {
 }
 
 h1,h2,h3,h4,h5,h6,strong{
-  font-family: $global-font-family-default-bold !important;
   font-weight: 500;
+}
+strong{
+  font-family: $global-font-family-default-bold !important;
 }
 
 h1, h2, h3, h4, h5, h6, figure, p, pre, fieldset, ul, ol, menu, blockquote, dl, dd {

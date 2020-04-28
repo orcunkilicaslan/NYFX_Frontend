@@ -54,6 +54,10 @@
           @include transition-multiple(border-color 0.3s ease-in-out);
         }
 
+        &.darkbg::before{
+          border-top-color: $global-clr-white;
+        }
+
         span{display: block;}
       }
     }
