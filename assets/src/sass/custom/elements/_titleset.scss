@@ -4,7 +4,7 @@
   $sitetitleclassname: &;
 
   h1,h2,h3,h4,h5,h6,p{position: relative;}
-  h1,h2,h3,h4,h5,h6{font-family: $global-font-family-proximanova-bold !important;}
+  h1,h2,h3,h4,h5,h6{font-family: $global-font-family-proximanova-regular !important;}
   p{
     margin-bottom: 15px;
     &:last-child{

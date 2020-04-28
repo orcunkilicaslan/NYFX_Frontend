@@ -180,7 +180,7 @@
     .summarytable{
 
       &-tabnav{
-        border-top: 1px solid $global-clr-soft-gray;
+        background-color: #ebebec;
       }
 
       &-tabcontent{}
@@ -246,6 +246,7 @@
     }
 
     i.icons-texttypes{
+      color: $global-clr-red;
       height: 44px;
       font-family: $global-font-family-proximanova-thin !important;
       font-size: 50px;

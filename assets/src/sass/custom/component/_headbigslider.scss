@@ -21,25 +21,24 @@
   &-owl{}
 
   &-item{
-    height: 550px;
+    height: 100vh;
+    min-height: 800px;
     padding-top: 60px;
 
     &-container{
       @include flexbox-display-flex();
       @include flexbox-align-items(center);
+      @include flexbox-justify-content(center);
       height: 100%;
       padding-top: 70px;
       padding-bottom: 70px;
       position: relative;
       z-index: 3;
     }
-    &-content{}
+    &-content{
+      text-align: center;
+    }
     &-title{
-
-      @include BootstrapMinWidthResponsive(lg){
-        max-width: 410px;
-      }
-
       .slidertitle{
         font-size: 50px;
         line-height: 0.9;
@@ -61,15 +60,19 @@
       }
     }
     &-bg{
+      @include flexbox-display-flex();
+      @include flexbox-align-items(center);
+      @include flexbox-justify-content(center);
       width: 100%;
       height: 100%;
       position: absolute;
       top: 0;
 
       img{
-        width: auto !important;
-        max-width: none !important;
+        //width: auto !important;
+        //max-width: none !important;
         margin: auto;
+        height: 100%;
 
         @include BootstrapMinWidthResponsive(1k){
           width: 100% !important;

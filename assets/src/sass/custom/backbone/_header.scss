@@ -1,8 +1,8 @@
 .header{
   width: 100%;
+  padding: 20px;
   position: fixed;
   z-index: 10;
-  padding: 20px;
   @include transition-multiple(background 0.15s ease-in-out, padding 0.15s ease-in-out);
 
   &-web{
@@ -87,8 +87,8 @@
         }
         .userareaiconslang{
           font-family: $global-font-family-proximanova-thin !important;
-          font-size: 20px;
-          line-height: 1.6;
+          font-size: 16px;
+          line-height: 2.2;
           text-align: center;
         }
       }
@@ -98,20 +98,29 @@
         position: relative;
 
         .dropdownbtns{
+
           &:first-child{
-            .btn{@include border-radii(50px,0,0,50px);}
+            .btn{@include border-radii(4px,0,0,4px);}
           }
           &:last-child{
-            .btn{@include border-radii(0,50px,50px,0);}
+            .btn{@include border-radii(0,4px,4px,0);}
           }
 
           > .btn{
-            width: 140px;
+            color: $global-clr-white;
+            width: 105px;
             height: 36px;
-            font-size: 18px;
-            font-weight: 500;
-            line-height: 1.35;
-            border: none;
+            font-size: 16px;
+            line-height: 1.4;
+            border-color: $global-clr-green;
+
+            &.btn-light{
+              background-color: transparentize($global-clr-white, 0.85);
+            }
+            &.btn-success{
+              background-color: $global-clr-green;
+
+            }
           }
         }
 

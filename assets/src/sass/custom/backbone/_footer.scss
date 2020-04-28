@@ -47,6 +47,11 @@
 
           a{
             color: $global-clr-soft-gray;
+            @include transition-multiple(color 0.15s ease-in-out);
+
+            &:hover{
+              color: lighten($global-clr-soft-gray, 20%);
+            }
           }
         }
       }
