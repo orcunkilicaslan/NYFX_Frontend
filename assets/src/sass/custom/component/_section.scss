@@ -82,11 +82,11 @@
       background-color: $global-clr-white;
       padding: 5px 45px 45px;
       @include border-radius(10px);
-      @include box-shadow(0, 0, 20px, transparentize($global-clr-dark-black, 0.90));
+      @include box-shadow(0 0 20px transparentize($global-clr-dark-black, 0.90));
       @include transition-multiple(box-shadow 0.3s ease-in-out);
 
       &:hover{
-        @include box-shadow(0, 0, 30px, transparentize($global-clr-dark-black, 0.80));
+        @include box-shadow(0 0 30px transparentize($global-clr-dark-black, 0.80));
 
         .boxicons{
           i[class*="icons-out"]{
@@ -357,6 +357,7 @@
           }
 
           h4{
+            font-family: $global-font-family-proximanova-bold !important;
             margin-bottom: 5px;
           }
 
