@@ -21,10 +21,10 @@
     }
   }
 
-  &:focus{@include box-shadow-none-imp();}
-  &:hover{@include box-shadow-none-imp();}
+  &:focus{@include box-shadow(none !important);}
+  &:hover{@include box-shadow(none !important);}
   &:not(:disabled):not(.disabled).active:focus,
-  &:not(:disabled):not(.disabled):active:focus{@include box-shadow-none-imp();}
+  &:not(:disabled):not(.disabled):active:focus{@include box-shadow(none !important);}
 
   i[class*="icons-"]{@include svg-filter(0%, 1, 0, 100%);}
 

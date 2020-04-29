@@ -96,14 +96,14 @@
       border-bottom: none;
     }
     tbody tr{
-      @include transition-multiple(box-shadow 0.15s ease-in-out);
+      //@include transition-multiple(box-shadow 0.15s ease-in-out);
 
       td{
         &:first-child{border-left: 1px solid transparent;}
         &:last-child{border-right: 1px solid transparent;}
       }
       &:hover{
-        @include box-shadow(0, 0, 10px, transparentize($global-clr-green, 0.5));
+        //@include box-shadow(0 0 10px transparentize($global-clr-green, 0.5));
 
         td{
           border-bottom: 1px solid;
