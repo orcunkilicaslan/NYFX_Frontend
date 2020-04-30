@@ -422,10 +422,10 @@
 
       &-tabcontent{
 
-        .tab-pane{
+        .firsttabpane{
           color: $global-clr-white;
           background-color: $global-clr-dark-black;
-          min-height: 450px;
+          min-height: 480px;
           position: relative;
 
           &::before{
@@ -446,6 +446,8 @@
             background-image: linear-gradient(to bottom, #f2b044, #e26934);
 
             &::before{border-color: #f2b044;}
+
+            .contentarea-img{bottom: -167px;}
           }
 
           &.mt5tab{
@@ -453,6 +455,86 @@
             background-image: linear-gradient(to bottom, #ff0000, #800000);
 
             &::before{border-color: #ff0000;}
+
+            .contentarea-img{bottom: -167px;}
+          }
+        }
+
+        .contentarea{
+          padding-top: 70px;
+
+          &-img{
+            position: absolute;
+            bottom: -190px;
+            z-index: 0;
+          }
+
+          &-txt{
+            @include flexbox-display-flex();
+            @include flexbox-align-items(center);
+            @include flexbox-flex-direction(column);
+            width: 100%;
+            max-width: 500px;
+            height: 100%;
+            margin: 0 0 0 auto;
+            padding: 75px 0;
+            position: relative;
+            z-index: 1;
+
+            .groupbtns{
+              @include flexbox-display-flex();
+              @include flexbox-justify-content(flex-end);
+              margin: 20px 0 0 auto;
+
+              > .btn{
+                width: 165px;
+                font-size: 18px;
+                font-weight: 600;
+
+                &.svgicons{
+                  @include flexbox-display-flex();
+                  @include flexbox-justify-content(center);
+                  @include flexbox-align-items(center);
+                  padding: 0;
+                }
+
+                &:first-child{
+                  @include border-radii(4px,0,0,4px);
+                }
+                &:last-child{
+                  @include border-radii(0,4px,4px,0);
+                }
+
+                &.btn-light{
+                  color: $global-clr-white;
+                  background-color: transparent;
+                  border-color: $global-clr-white;
+                }
+                &.btn-secondary{
+                  color: $global-clr-orange;
+                  background-color: $global-clr-white;
+                  border-color: $global-clr-white;
+                }
+              }
+            }
+
+            .subtabs{
+              &-nav{
+                width: 100%;
+                margin-bottom: 20px;
+
+                .nav-link{
+                  color: $global-clr-white;
+                  background-color: transparent;
+                  border-color: $global-clr-white;
+
+                  &.active{
+                    color: $global-clr-text-dark;
+                    background-color: $global-clr-white;
+                  }
+                }
+              }
+            }
           }
         }
       }
