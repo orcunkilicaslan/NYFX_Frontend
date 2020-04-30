@@ -384,4 +384,78 @@
       }
     }
   }
+
+  &-platformstabs{
+    position: relative;
+
+    $platformstabs-width: 500px;
+    $platformstabs-height: 46px;
+
+    .platforms{
+
+      &-tabnav{
+        background-color: $global-clr-white;
+        //border: 2px solid #f2b044;
+        max-width: calc(#{$platformstabs-width} - 4px);
+        margin: auto;
+
+        &-container{
+          position: absolute;
+          top: calc(-#{$platformstabs-height} / 2);
+          left: 50%;
+          @include translateX(-50%);
+          z-index: 1;
+        }
+
+        .nav-link{
+
+          &:hover{
+            border-color: transparent;
+          }
+
+          &.active{
+            background-color: $global-clr-soft-black;
+            border-color: $global-clr-soft-black;
+          }
+        }
+      }
+
+      &-tabcontent{
+
+        .tab-pane{
+          color: $global-clr-white;
+          background-color: $global-clr-dark-black;
+          min-height: 450px;
+          position: relative;
+
+          &::before{
+            content: "";
+            width: $platformstabs-width;
+            height: calc(#{$platformstabs-height} + 4px);
+            background-color: transparent;
+            border: 2px solid $global-clr-dark-black;
+            position: absolute;
+            top: calc(-#{$platformstabs-height} / 2 - 2px);
+            left: 50%;
+            @include translateX(-50%);
+            @include border-radius(6px);
+          }
+
+          &.mt4tab{
+            background-color: #e26934;
+            background-image: linear-gradient(to bottom, #f2b044, #e26934);
+
+            &::before{border-color: #f2b044;}
+          }
+
+          &.mt5tab{
+            background-color: #800000;
+            background-image: linear-gradient(to bottom, #ff0000, #800000);
+
+            &::before{border-color: #ff0000;}
+          }
+        }
+      }
+    }
+  }
 }

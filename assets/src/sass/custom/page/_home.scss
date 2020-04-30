@@ -215,7 +215,7 @@
   }
 
   &-news{
-    padding: 60px 0 80px;
+    padding: 60px 0 20px;
 
     .sitetitle{
       padding-bottom: 55px;
@@ -331,6 +331,14 @@
           }
         }
       }
+    }
+  }
+
+  &-platforms{
+    padding: 70px 0;
+
+    .sitetitle{
+      padding-bottom: 50px;
     }
   }
 
