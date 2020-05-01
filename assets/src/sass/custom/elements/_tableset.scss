@@ -93,10 +93,15 @@
 
   &.hovergreentable{
     thead tr th{
+      border-bottom: 1px solid darken($global-border-light-gray, 10%);
       border-bottom: none;
     }
     tbody tr{
       //@include transition-multiple(box-shadow 0.15s ease-in-out);
+
+      &:first-child td{
+        border-top: 1px solid darken($global-border-light-gray, 10%);
+      }
 
       td{
         &:first-child{border-left: 1px solid transparent;}
