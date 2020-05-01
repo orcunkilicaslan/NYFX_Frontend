@@ -3,9 +3,9 @@
 $('#headbigsliderowl').owlCarousel({
     loop:true,
     nav:false,
-    dots:false,
+    dots:true,
     autoplay:true,
-    autoplayTimeout:1500,
+    autoplayTimeout:10000,
     autoplayHoverPause:false,
     items:1,
     margin:0,
